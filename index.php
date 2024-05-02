@@ -46,8 +46,8 @@ $hotels = [
     ],
 
 ];
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,6 +63,7 @@ $hotels = [
 <body class="bg-dark">
     <div class="container mt-5 text-center">
         <h1 class="text-white mb-5 fw-semibolder">I Migliori Hotel</h1>
+        
         <table class="table border border-2 border-success p-2 fw-medium fs-5 ">
             <thead>
                 <tr>
@@ -82,19 +83,20 @@ $hotels = [
                 <tr>
                     <th class="border border-1 border-success" scope="row">Parcheggio</th>
                     <?php foreach ($hotels as $key => $element) { ?>
-                        <td class="border border-1 border-success"> <?php echo $element['parking'] === true ? 'Accesso al Parcheggio' : 'Parcheggio Assente' ?></td>
+                        <td class="border border-1 border-success">
+                            <?php echo $element['parking'] === true ? 'True' : 'False' ?></td>
                     <?php } ?>
                 </tr>
                 <tr>
                     <th class="border border-1 border-success" scope="row">Voto</th>
                     <?php foreach ($hotels as $key => $element) { ?>
-                        <td class="border border-1 border-success"><?php echo  $element['vote'] ?></td>
+                        <td class="border border-1 border-success"><?php echo $element['vote'] ?></td>
                     <?php } ?>
                 </tr>
                 <tr>
                     <th class="border border-1 border-success" scope="row">Distanza Dal centro</th>
                     <?php foreach ($hotels as $key => $element) { ?>
-                        <td class="border border-1 border-success" ><?php echo  $element['distance_to_center'] ?></td>
+                        <td class="border border-1 border-success"><?php echo $element['distance_to_center'] ?></td>
                     <?php } ?>
                 </tr>
             </tbody>
