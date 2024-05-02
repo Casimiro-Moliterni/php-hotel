@@ -47,7 +47,6 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
 
 ];
 
-var_dump($hotels);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,12 +58,15 @@ var_dump($hotels);
 <body>
     <div>
         <ul>
+            <?php foreach($hotels as $key => $element){?>
             <li>
-                <div>Nome hotel [nome hotel]</div>
-                <div>Descrizione [descrizione]</div>
-                <div>Voto [voto]</div>
-                <div>Distanza dal Centro [distanza]</div>
+                <div>Nome hotel : <?php echo $element['name']?></div>
+                <div>Descrizione <?php echo $element['description']?></div>
+                <div>Parcheggio <?php echo $element['parking'] ?></div>
+                <div>Voto <?php echo $element['vote'] ?> </div>
+                <div>Distanza dal Centro <?php echo $element['distance_to_center'] ?></div>           
             </li>
+            <?php }?>
         </ul>
     </div>
 </body>
